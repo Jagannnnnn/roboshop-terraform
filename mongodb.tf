@@ -9,7 +9,6 @@ resource "aws_instance" "mongodb" {
 }
 
 
-resource "aws_instance" "mongodb" {
   provisioner "remote-exec" {
 
     connection {
@@ -23,7 +22,7 @@ resource "aws_instance" "mongodb" {
       "ansible-pull -i localhost, -U https://github.com/Jagannnnnn/roboshop-ansible2.git roboshop.yml -e component_name=mongodb -e env=dev",
     ]
   }
-}
+
 
 
 

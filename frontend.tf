@@ -8,7 +8,6 @@ resource "aws_instance" "frontend" {
   }
 }
 
-resource "aws_instance" "frontend" {
   provisioner "remote-exec" {
 
     connection {
@@ -22,7 +21,7 @@ resource "aws_instance" "frontend" {
       "ansible-pull -i localhost, -U https://github.com/Jagannnnnn/roboshop-ansible2.git roboshop.yml -e component_name=frontend -e env=dev",
     ]
   }
-}
+
 
 
 
