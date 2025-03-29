@@ -22,7 +22,6 @@ provisioner "remote-exec" {
   ]
 }
 
-}
 
 resource "aws_route53_record" "mongodb" {
   zone_id = "Z07420703D2F2QO6YXFHV"
