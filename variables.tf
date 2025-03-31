@@ -19,5 +19,5 @@ variable "zone_id" {
   default = "Z07420703D2F2QO6YXFHV"
 }
 variable "env" {
-  default = dev
+  default = "dev"
 }
