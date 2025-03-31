@@ -7,19 +7,19 @@ resource "aws_instance" "mongodb" {
     Name = "mongodb"
   }
 
-  provisioner "remote-exec" {
-
-    connection {
-      type     = "ssh"
-      user     = "ec2-user"
-      password = "DevOps321"
-      host     = self.public_ip
-    }
-    inline = [
-      " sudo pip3.11 install ansible",
-      "ansible-pull -i localhost, -U https://github.com/Jagannnnnn/roboshop-ansible2.git roboshop.yml -e component_name=mongodb -e env=dev",
-    ]
-  }
+  # provisioner "remote-exec" {
+  #
+  #   connection {
+  #     type     = "ssh"
+  #     user     = "ec2-user"
+  #     password = "DevOps321"
+  #     host     = self.public_ip
+  #   }
+  #   inline = [
+  #     " sudo pip3.11 install ansible",
+  #     "ansible-pull -i localhost, -U https://github.com/Jagannnnnn/roboshop-ansible2.git roboshop.yml -e component_name=mongodb -e env=dev",
+  #   ]
+  # }
 }
 
 
