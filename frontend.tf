@@ -1,7 +1,7 @@
 resource "aws_instance" "frontend" {
-  ami     = "ami-09c813fb71547fc4f"
-  instance_type = "t3.small"
-  vpc_security_group_ids = ["sg-09a30c40cfd8547e6"]
+  ami     = var.ami_id
+  instance_type = var.instance_type
+  vpc_security_group_ids = var.vpc_security_group_ids
 
   tags = {
     Name = "frontend"
