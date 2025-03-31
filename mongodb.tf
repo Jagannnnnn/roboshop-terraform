@@ -30,7 +30,7 @@ resource "null_resource" "mongodb" {
     }
     inline = [
       " sudo pip3.11 install ansible",
-      "ansible-pull -i localhost, -U https://github.com/Jagannnnnn/roboshop-ansible2.git roboshop.yml -e component_name=mongodb -e env=dev",
+      "ansible-pull -i localhost, -U https://github.com/Jagannnnnn/roboshop-ansible2.git roboshop.yml -e component_name=mongodb -e env-dev",
     ]
   }
 }
