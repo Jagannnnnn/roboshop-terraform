@@ -8,11 +8,11 @@ variable "vpc_security_group_ids" {
   default = "sg-09a30c40cfd8547e6"
 }
 variable "instances" {
-  default = [
-  "catalogue",
-    "frontend",
-    "mongodb"
-  ]
+  default = {
+   mongodb = null
+    catalogue = null
+    frontend = null
+  }
 }
 
 variable "zone_id" {
