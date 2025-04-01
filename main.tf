@@ -5,7 +5,7 @@ ami     = var.ami_id
   # vpc_security_group_ids = var.vpc_security_group_ids
 
   tags = {
-    Name = var.instances[each.key]
+    Name = each.key
   }
 
 }
@@ -14,7 +14,7 @@ ami     = var.ami_id
 resource "aws_route53_record" "record" {
   for_each = var.instances
   zone_id = var.zone_id
-  name    = "${var.instances[each.key]}-${var.env}"
+  name    = "${each.key}-${var.env}"
   type    = "A"
   ttl     = 10
   records = [aws_instance.instance[each.key].private_ip]
